@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.83">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="style1.css">
+    <title>web design and development course</title>
+</head>
+<body onresize="windowResized()">
+    <div class="animation-part">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">AKSolution</h1>
+            <div class="menu" id="menu">
+                <a href="">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="">SERVICE</a>
+                <a href="">DESIGN</a>
+                <a href="">CONTACT</a>
+            </div>
+            <div class="search-field">
+                <input type="search" name="searchBar" id="searchBar" placeholder="Search course here...">
+                <input type="submit" name="searchBtn" id="searchBtn" value="Search">
+            </div>
+            <div class="menu-icon" onclick="displaySlideMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="parent">
+            <div class="heading-description-section">
+                <h1>Web Design & <br> <span>Development</span> <br> Course</h1>
+                <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, voluptatum. Deleniti ratione eum accusamus? Atque, commodi dicta. Ipsa suscipit minus magni reiciendis sed dicta quo, deserunt, modi eligendi iste beatae.
+                </p>
+                <input type="button" value="JOIN US">
+            </div>
+            <div class="login-section">
+               <form>
+                    <center><h2>LOGIN</h2></center>
+                    <input type="email" name="email" id="email" placeholder="Enter Email Here" autocomplete="off">
+                    <input type="password" name="password" id="password" placeholder="Enter Password Here" autocomplete="off">
+                    <input type="submit" name="submit" value="Login">
+                    <center>
+                        <p>
+                            Don't have an account? <span>Sign up</span>
+                        </p>
+                    </center>
+               </form>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
+
+<script>
+
+    var isMenuVisible = true;
+    function displaySlideMenu()
+    {
+        if(isMenuVisible)
+        {
+            document.getElementById("menu").style.width="180px";
+            isMenuVisible=false;
+        }
+        else{
+            document.getElementById("menu").style.width="0";
+            isMenuVisible=true;
+        }
+    }
+
+    function windowResized()
+    {
+        if(innerWidth>=1005)
+        {
+            document.getElementById("menu").style.width="auto";
+        }
+        else{
+            document.getElementById("menu").style.width="0";
+            isMenuVisible=true;
+        }
+    }
+  
+</script>
